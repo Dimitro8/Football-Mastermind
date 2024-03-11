@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Football Mastermind</string>
+    <string name="football_knowledge_test">Football knowledge test</string>
+    <string name="next">Next</string>
+    <string name="exit">Exit</string>
+    <string name="start">Start</string>
+    <string name="your_result">Your result</string>
+    <string name="loading">Loading</string>
+    <string name="to_menu">To menu</string>
 </resources>
