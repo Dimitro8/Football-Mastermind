@@ -23,10 +23,13 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            multiDexEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release" )
         }
     }
     compileOptions {
@@ -45,6 +48,16 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("keystore.jks")
+            storePassword= "newapp"
+            keyAlias ="key0"
+            keyPassword ="newapp"
+            storeType= "jks"
         }
     }
 }
